@@ -1,0 +1,17 @@
+# Ignora dipendenze e ambienti di terze parti
+panda3d/
+ros2_vision_ws/
+metadrive/metadrive/
+
+# Ignora build ROS2 o CMake
+robotic_project/build/
+robotic_project/install/
+
+# File temporanei Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Log, cache, ecc.
+*.log
+*.DS_Store
