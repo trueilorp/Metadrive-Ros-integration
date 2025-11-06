@@ -1,10 +1,10 @@
-# 🤖 Robotics Project: MetaDrive and ROS Integration 🛣️
+# 🤖 AI & Robotics Project: MetaDrive and ROS Integration 🛣️
 
 This project integrates the vehicular simulation **MetaDrive** with the **ROS 2** (Robot Operating System 2) framework for managing and training a robotic controller.
 
-## 📁 Main Directory Structure
+## Main Directory Structure
 
-The `~/robotics-project-all` directory contains the following main files and folders:
+The `~/metadrive-ros-integration` directory contains the following main files and folders:
 
 | File/Folder Name | Description |
 | :--- | :--- |
@@ -23,7 +23,10 @@ The `~/robotics-project-all` directory contains the following main files and fol
 
 ---
 
-## 🚀 Startup Instructions: The Three Terminals
+## Before starting
+First, run the start_project_config.bash file to initialize the working space.
+
+## Startup Instructions: The Three Terminals
 
 The project is designed to be started on **three separate and distinct terminals** by executing the commands in order:
 
@@ -31,8 +34,8 @@ The project is designed to be started on **three separate and distinct terminals
 Starts the ROS nodes responsible for communication (via sockets) with the MetaDrive environment.
 
 * **File Executed:** `1_comand_terminal.bash`
-* **Main Action:** Launches the ROS bridges from the launch file:
-    * `/home/trueilorp/robotics-project-all/metadrive/bridges/ros_bridge/src/metadrive_example_bridge/launch/metadrive_example_bridge.launch.py`
+* **Main Action:** Launches the bridges from the launch file:
+    * `/metadrive/bridges/ros_bridge/src/metadrive_example_bridge/launch/metadrive_example_bridge.launch.py`
 * **Bridge Files:** The nodes include `camera_bridge.py`, `cmd_vel_bridge.py`, `lidar_bridge.py`, `obj_bridge.py`, and `state_and_lidar_bridge.py`.
 
 ### 2. Terminal 2: MetaDrive Environment (Socket Server)
@@ -40,29 +43,29 @@ Starts the MetaDrive simulation environment and the socket connection.
 
 * **File Executed:** `2_comand_terminal.bash`
 * **Main Action:** Generates the MetaDrive environment and opens the **socket server** connection with ROS.
-* **Reference File:** `/home/trueilorp/robotics-project-all/metadrive/bridges/ros_bridge/ros_socket_server.py`
+* **Reference File:** `/metadrive/bridges/ros_bridge/ros_socket_server.py`
 
 ### 3. Terminal 3: ROS Controller Node
 Starts the ROS control node which processes received data and sends commands to the vehicle.
 
 * **File Executed:** `3_comand_terminal.bash`
 * **Main Action:** Starts the ROS controller node.
-* **Reference File:** `/home/trueilorp/robotics-project-all/robotic_project/src/metadrive_controller/metadrive_controller/main.py`
+* **Reference File:** `/robotic_project/src/metadrive_controller/metadrive_controller/main.py`
 
 ---
 
-## 🧠 Model Training and Evaluation
+## Model Training and Evaluation
 
 The following scripts are used for training and evaluating the driving model:
 
 * **Training:** Run `train_model.bash` in the root directory.
-    * This starts the training script located at `/home/trueilorp/robotics-project-all/metadrive/bridges/ros_bridge/models_training`.
+    * This starts the training script located at `/metadrive/bridges/ros_bridge/models_training`.
 * **Evaluation:** Run `eval_model.bash` in the root directory.
-    * This starts the evaluation script located at `/home/trueilorp/robotics-project-all/metadrive/bridges/ros_bridge/models_evaluation`.
+    * This starts the evaluation script located at `/metadrive/bridges/ros_bridge/models_evaluation`.
 
 ### Models and Configuration
 
 * **Pre-trained Models:** Two pre-trained models are available in the folder:
-    * `/home/trueilorp/robotics-project-all/metadrive/bridges/ros_bridge/models`
+    * `/metadrive/bridges/ros_bridge/models`
 * **Configuration:** Parameters for training and configuring the MetaDrive environment can be modified in the file:
-    * `/home/trueilorp/robotics-project-all/metadrive/bridges/ros_bridge/config.json`
+    * `/metadrive/bridges/ros_bridge/config.json`
