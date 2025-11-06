@@ -1,4 +1,4 @@
-# 🤖 AI & Robotics Project: MetaDrive and ROS Integration 🛣️
+# AI & Robotics Project: MetaDrive and ROS Integration
 
 This project integrates the vehicular simulation **MetaDrive** with the **ROS 2** (Robot Operating System 2) framework for managing and training a robotic controller.
 
