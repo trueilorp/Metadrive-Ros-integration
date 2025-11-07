@@ -1,4 +1,4 @@
-source /home/trueilorp/metadrive/bridges/ros_bridge/install/setup.bash
+source metadrive/bridges/ros_bridge/install/setup.bash
 
 cd ~/robotic_project
 

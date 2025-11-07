@@ -22,9 +22,14 @@ The `~/metadrive-ros-integration` directory contains the following main files an
 | `metadrive/bridges/ros_bridge/` | Main directory for ROS/MetaDrive integration. |
 
 ---
+## Prerequisite: Install and Integrate MetaDrive
 
+Before running this project, you need to clone and install **MetaDrive** from its official repository *https://github.com/metadriverse/metadrive*
+and follow the MetaDrive’s official installation instructions.
+
+Once installed, place the MetaDrive directory inside `metadrive-ros-integration`, then replace its existing `bridges` folder with the one provided in `bridges` from this repository.
 ## Before starting
-First, run the start_project_config.bash file to initialize the working space.
+First, run the **start_project_config.bash** file to initialize the working space.
 
 ## Startup Instructions: The Three Terminals
 

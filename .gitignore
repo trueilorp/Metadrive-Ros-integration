@@ -1,9 +1,8 @@
 # Ignora dipendenze e ambienti di terze parti
 panda3d/
 ros2_vision_ws/
-metadrive/metadrive/
-metadrive/bridges/ros_bridge/models/tqc_metadrive_multimodal.zip
-metadrive/bridges/ros_bridge/models/ppo_metadrive_multimodal_nocamera.zip
+metadrive/
+bridges/ros_bridge/models/tqc_metadrive_multimodal.zip
 
 # Ignora build ROS2 o CMake
 robotic_project/build/

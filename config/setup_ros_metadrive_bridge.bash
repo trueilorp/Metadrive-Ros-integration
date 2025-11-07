@@ -8,9 +8,7 @@
 
 # Directory of the ROS bridge
 
-WORKDIR="$HOME/metadrive/bridges/ros_bridge"
-
-
+WORKDIR="$HOME/metadrive-ros-integration/metadrive/bridges/ros_bridge"
 
 # Change directory
 

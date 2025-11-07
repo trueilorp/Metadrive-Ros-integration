@@ -2,17 +2,17 @@
 
 # setup_all.bash
 
-# Esegue setup_ros_metadrive_bridge.bash e setup_vision_msgs_ws.bash uno dopo l'altro
+# Run setup_ros_metadrive_bridge.bash and setup_vision_msgs_ws.bash
 
 
 
-set -e  # esce se uno dei comandi fallisce
+set -e 
 
 
 
-echo "Eseguo setup di vision_msgs workspace..."
+echo "Starting vision_msgs workspace setup..."
 
-./setup_vision_msgs_ws.bash
+./config/setup_vision_msgs_ws.bash
 
 source ~/ros2_vision_ws/install/setup.bash
 
@@ -20,22 +20,21 @@ source ~/ros2_vision_ws/install/setup.bash
 
 
 
-echo "Eseguo setup del ROS bridge MetaDrive..."
+echo "Starting ROS bridge MetaDrive setup..."
 
-./setup_ros_metadrive_bridge.bash
+./config/setup_ros_metadrive_bridge.bash
 
-source ~/metadrive/bridges/ros_bridge/install/setup.bash
-
-
-
-cd ~/metadrive/bridges/ros_bridge
+source ~/metadrive-ros-integration/metadrive/bridges/ros_bridge/install/setup.bash
 
 
 
-# Lancio il ROS bridge
-
-echo "Lancio il ROS bridge MetaDrive..."
+cd ~/metadrive-ros-integration/metadrive/bridges/ros_bridge
 
 
 
-echo "Tutti i setup completati correttamente!"
+# Launch ROS bridge
+
+echo "Launch ROS bridge MetaDrive..."
+
+
+echo "All setup completed!"
