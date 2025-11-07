@@ -2,7 +2,8 @@
 panda3d/
 ros2_vision_ws/
 metadrive/
-bridges/ros_bridge/models/tqc_metadrive_multimodal.zip
+models_trained/tqc_metadrive_multimodal.zip
+wandb/
 
 # Ignora build ROS2 o CMake
 robotic_project/build/

@@ -28,8 +28,26 @@ Before running this project, you need to clone and install **MetaDrive** from it
 and follow the MetaDrive’s official installation instructions.
 
 Once installed, place the MetaDrive directory inside `metadrive-ros-integration`, then replace its existing `bridges` folder with the one provided in `bridges` from this repository.
+
 ## Before starting
 First, run the **start_project_config.bash** file to initialize the working space.
+
+## Model Training and Evaluation
+
+The following scripts are used for training and evaluating the driving model:
+
+* **Training:** Run `train_model.py` in the root directory.
+* **Evaluation:** Run `eval_model.py` in the root directory.
+
+### Models and Configuration
+
+* **Pre-trained Models:** Some pre-trained models are available in the folder:
+    * `/models_trained`
+* **Configuration:** Parameters for training and configuring the MetaDrive environment can be modified in the file:
+    * `config.json`
+    
+    Please make sure that the model loaded parameters match the parameters in the *config.json* file
+    
 
 ## Startup Instructions: The Three Terminals
 
@@ -58,19 +76,3 @@ Starts the ROS control node which processes received data and sends commands to 
 * **Reference File:** `/robotic_project/src/metadrive_controller/metadrive_controller/main.py`
 
 ---
-
-## Model Training and Evaluation
-
-The following scripts are used for training and evaluating the driving model:
-
-* **Training:** Run `train_model.bash` in the root directory.
-    * This starts the training script located at `/metadrive/bridges/ros_bridge/models_training`.
-* **Evaluation:** Run `eval_model.bash` in the root directory.
-    * This starts the evaluation script located at `/metadrive/bridges/ros_bridge/models_evaluation`.
-
-### Models and Configuration
-
-* **Pre-trained Models:** Two pre-trained models are available in the folder:
-    * `/metadrive/bridges/ros_bridge/models`
-* **Configuration:** Parameters for training and configuring the MetaDrive environment can be modified in the file:
-    * `/metadrive/bridges/ros_bridge/config.json`
