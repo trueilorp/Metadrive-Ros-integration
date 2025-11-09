@@ -11,15 +11,19 @@ The `~/metadrive-ros-integration` directory contains the following main files an
 | `1_comand_terminal.bash` | Script for **Terminal 1** (Launching ROS Bridges). |
 | `2_comand_terminal.bash` | Script for **Terminal 2** (Starting MetaDrive and Socket Server). |
 | `3_comand_terminal.bash` | Script for **Terminal 3** (Starting the ROS Controller Node). |
-| `eval_model.bash` | Script to start **model evaluation**. |
-| `train_model.bash` | Script to start **model training**. |
+| `eval_model.py` | Python file to start **model evaluation**. |
+| `train_model.py` | Python file to start **model training**. |
+| `config.json` | Config file to define model and env configuration. |
+| `start_project_config.bash` | Script to initialize project dependencies. |
+
+| `bridges` | Contains the ROS bridges. |
+| `callback` | Contains the callback of training. |
+| `config` | Contains the two script used by *start_project_config.bash*. |
+| `env` | Contains the customize metadrive environment. |
+| `models_trained` | Contains some models already trained. |
+| `nets` | Contains the customize CNN for multi input policy. |
+| `obs` | Contains the customize observations. |
 | `robotic_project` | Contains the code for the ROS controller node. |
-| `metadrive` | Contains the MetaDrive environment and the related ROS bridges. |
-| `ros2_vision_ws` | ROS 2 workspace for vision messages (optional/additional section). |
-| `setup_vision_msgs_ws.bash` | Setup script for the `ros2_vision_ws` workspace. |
-| `setup_ros_metadrive_bridge.bash` | Setup script for the ROS/MetaDrive bridge. |
-| `start_project_config.bash` | Initial project configuration script. |
-| `metadrive/bridges/ros_bridge/` | Main directory for ROS/MetaDrive integration. |
 
 ---
 ## Prerequisite: Install and Integrate MetaDrive
@@ -46,7 +50,7 @@ The following scripts are used for training and evaluating the driving model:
 * **Configuration:** Parameters for training and configuring the MetaDrive environment can be modified in the file:
     * `config.json`
     
-    Please make sure that the model loaded parameters match the parameters in the *config.json* file
+    Please make sure that the model loaded parameters match the parameters in the *config.json* file.
     
 
 ## Startup Instructions: The Three Terminals
