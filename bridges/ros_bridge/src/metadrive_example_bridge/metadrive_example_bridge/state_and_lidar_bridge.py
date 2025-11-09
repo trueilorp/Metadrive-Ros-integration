@@ -30,8 +30,6 @@ class StateAndLidarPublisher(Node):
 		self.timer = self.create_timer(self.timer_period, self.timer_callback)
 		self.i = 0
 
-		# self.get_logger().info("Nodo ROS2 'state_and_lidar_publisher' avviato.")
-
 	def timer_callback(self):
 		try:
 			# Leggi il messaggio dalla socket
@@ -58,7 +56,7 @@ class StateAndLidarPublisher(Node):
 			# Nessun messaggio disponibile (socket vuota)
 			pass
 		except Exception as e:
-			self.get_logger().error(f"Errore nel ricevere state_and_lidar: {e}", exc_info=True)
+			self.get_logger().error(f"Error nel ricevere state_and_lidar: {e}", exc_info=True)
 
 	def get_msg_header(self):
 		"""

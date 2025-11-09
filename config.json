@@ -1,6 +1,7 @@
 {
   "training": {
-	"total_timesteps": 10,
+	"total_timesteps": 1000000,
+	"total_timesteps_eval": 10000,
 	"n_steps": 512,
 	"batch_size": 64, 
 	"img_shape": 84, 

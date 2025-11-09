@@ -126,15 +126,19 @@ class RLmetadrive(Node):
 			"image": np.expand_dims(img, axis=0),  # add batch dim
 			"state_and_lidar": np.expand_dims(state_and_lidar, axis=0)
 		}
-
+		
+		# print("Observation Image Shape:", obs["image"].shape) # Observation Image Shape: (1, 84, 84, 3, 1)
+		# print("Observation State and Lidar Shape:", obs["state_and_lidar"].shape) # Observation State and Lidar Shape: (1, 49)
+		print("Observation", obs)
+		
 		# ------- PREDICT ACTION -------
 		action, _ = self.model.predict(obs, deterministic=True)
 		action = action[0]
 
-		print("Predicted Action:", action)
+		# print("Predicted Action:", action)
 
-		steering = action[0]
-		throttle = action[1]
+		steering = action[0] * 0.4
+		throttle = action[1] * 0.4
 
 		print("Steering:", steering, "Throttle:", throttle)
 
